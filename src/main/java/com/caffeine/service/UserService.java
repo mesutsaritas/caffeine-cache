@@ -16,7 +16,7 @@ public class UserService {
 	 * @param userId
 	 * @return
 	 */
-	@Cacheable(value = "user_cache", key = "{#userId}")
+	@Cacheable(value = "user_cache", key = "#userId")
 	public UserResource findByUserId(long userId) {
 		log.info("Trying to get user information for id {} ", userId);
 		return new UserResource(1L, "Mesut", "Sarıtaş");
